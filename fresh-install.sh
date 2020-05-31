@@ -53,14 +53,17 @@ arr=()
 while IFS= read -r line; do
    arr+=("$line")
 done <$filename
-#echo "Packages are ${arr[*]}."
+
 
 # get length of an array
 arraylength=${#arr[@]}
-echo "length is ${arraylength}"
+# echo "length is ${arraylength}"
 # use for loop to read all values and indexes
 for (( i=1; i<${arraylength}+1; i++ ));
 do
 #   echo $i " / " ${arraylength} " : " ${arr[$i-1]}
 user_prompt ${arr[$i-1]}
 done
+
+
+echo "Packages are ${PACKAGES[*]}."
