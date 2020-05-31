@@ -3,22 +3,22 @@
 echo -n "Enter the name of your package manager [APT,YUM,PACMAN] "
 read MANAGER
 
-
 case $MANAGER in
 
-  APT)
-    echo -n "apt"
+APT)
+    __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    bash ${__dir}/apt.sh
     ;;
 
-  YUM )
+YUM)
     echo -n "yum"
     ;;
 
-  PACMAN)
+PACMAN)
     echo -n "pacman"
     ;;
 
-  *)
+*)
     echo -n "unknown"
     ;;
 esac
