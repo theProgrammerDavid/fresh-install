@@ -1,15 +1,16 @@
 #!/bin/bash
 
 PACKAGES=()
-
+COMMON=()
 
 install_flutter() {
     sudo apt install -y vlc
 }
 
 user_prompt() {
-    read -t 1 -n 10000 discard
+    
     read -p "Do you want to install $1 (y/n)? " answer
+    
     case ${answer:0:1} in
     y | Y)
         PACKAGES+=("$1")
@@ -45,14 +46,21 @@ get_package_manager() {
         ;;
     esac
 }
+filename="./common.txt"
 
-filename='common.txt'
-while read line; do
-    # reading each line
-    echo "Line : $line"
-    user_prompt $line
-    
+
+arr=()
+while IFS= read -r line; do
+   arr+=("$line")
 done <$filename
+#echo "Packages are ${arr[*]}."
 
-
-echo "Packages are $PACKAGES."
+# get length of an array
+arraylength=${#arr[@]}
+echo "length is ${arraylength}"
+# use for loop to read all values and indexes
+for (( i=1; i<${arraylength}+1; i++ ));
+do
+#   echo $i " / " ${arraylength} " : " ${arr[$i-1]}
+user_prompt ${arr[$i-1]}
+done
