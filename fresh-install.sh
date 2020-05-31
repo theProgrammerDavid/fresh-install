@@ -1,20 +1,24 @@
 #!/bin/bash
 
-PACKAGES=()
+echo -n "Enter the name of your package manager [APT,YUM,PACMAN] "
+read MANAGER
 
-install_flutter () {
-    echo "Installing flutter"
-}
 
-user_prompt () {
- read -p "Do you want to install $1 (y/n)? " answer
-case ${answer:0:1} in
-    y|Y )
-        $2
+case $MANAGER in
+
+  APT)
+    echo -n "apt"
     ;;
-    * )
-        echo No
+
+  YUM )
+    echo -n "yum"
+    ;;
+
+  PACMAN)
+    echo -n "pacman"
+    ;;
+
+  *)
+    echo -n "unknown"
     ;;
 esac
-}
-user_prompt Flutter install_flutter
