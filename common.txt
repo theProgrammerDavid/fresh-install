@@ -1,1 +1,11 @@
 vlc
+openjdk-8-jdk
+build-essential
+mongodb
+libboost-dev
+libboost-all-dev
+openssh-server
+git
+software-properties-common
+apt-transport-https
+wget
