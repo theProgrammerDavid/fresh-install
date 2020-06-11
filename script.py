@@ -27,7 +27,7 @@ if package_manager == "apt" or package_manager == "apt-get":
     os.system("sudo apt update")
     for i in final_list:
         os.system(f"sudo {package_manager} install -y {i}")
-elif if package_manager == "pacman":
+elif package_manager == "pacman":
     os.system("sudo pacman -Sy")
     for i in final_list:
         os.system(f"sudo {package_manager} -S {i} --noconfirm")
