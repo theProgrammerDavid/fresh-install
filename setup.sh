@@ -3,7 +3,8 @@
 sudo apt update -y && sudo apt upgrade -y
 
 # install packages
-sudo apt install -y curl vim unzip git
+sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
+  python3-pip vlc build-essential
 
 
 
