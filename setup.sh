@@ -4,7 +4,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 # install packages
 sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
-  python3-pip vlc build-essential ca-certificates gnupg-agent
+  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools
 
 
 
@@ -27,8 +27,10 @@ sudo add-apt-repository \
 sudo apt update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
-####
-
+### NODE-JS SETUP ####
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+source ~/.bashrc
+nvm install `nvm list-remote | tail -n1`
 
 
 #### CLEAN-UP ####
