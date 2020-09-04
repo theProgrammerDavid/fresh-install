@@ -6,8 +6,9 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
   python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools
 
+#### GIT STUFF ####
 
-
+git config --global credential.helper store
 
 #### INSTALL VIM PLUG ####
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
