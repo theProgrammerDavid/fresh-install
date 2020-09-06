@@ -4,8 +4,12 @@ sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
 sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
-  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool
+  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client ubuntu-restricted-extras
+#### CONFIG FILE SETUP ####
 
+git clone https://github.com/theProgrammerDavid/config-files.git ~/config-files
+cd ~/config-files
+bash ./setup.sh
 #### GIT STUFF ####
 
 git config --global credential.helper store
@@ -42,5 +46,5 @@ nvm install `nvm list-remote | tail -n1`
 
 #### CLEAN-UP ####
 sudo apt autoremove
-
+rm -rf ~/config-files
 ####
