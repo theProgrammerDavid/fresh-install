@@ -38,7 +38,7 @@ sudo add-apt-repository \
    stable"
 
 sudo apt update -y
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo usermod -aG docker $USER
 
 echo "docker setup done"
