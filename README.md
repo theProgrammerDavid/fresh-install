@@ -1,6 +1,15 @@
 ## Fresh-Install
 
-Python script to setup all the required packages on a fresh install of Linux.
-Allows you to select the package manager. 
+Bash script to setup all the required packages on a fresh install of Ubuntu Linux.
 
-The file ```common.txt``` contains the packages with common names across all the package managers. The EOF must always be a newline
+For Ubuntu Setup
+```
+curl  https://raw.githubusercontent.com/theProgrammerDavid/fresh-install/master/setup.sh | bash
+
+```
+
+For Ubuntu Server Setup
+```
+curl  https://raw.githubusercontent.com/theProgrammerDavid/fresh-install/master/server.sh | bash
+
+```
