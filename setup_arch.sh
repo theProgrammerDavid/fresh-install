@@ -7,4 +7,14 @@ cd ~/config-files
 bash ./setup.sh
 
 sudo pacman -S docker docker-compose openssh p7zip p7zip-plugins unrar tar rsync 
- yay -S nodejs
+yay -S nodejs
+
+# setup the docker stuff
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+sudo groupadd docker
+sudo usermod -aG docker david
+
+echo ''
+
+docker run hello-world
