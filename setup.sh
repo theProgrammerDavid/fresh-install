@@ -4,7 +4,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
 sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
-  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client 
+  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy 
 
 echo "Finished installing base packages"
 
