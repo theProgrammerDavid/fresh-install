@@ -4,7 +4,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
 sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
-  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy 
+  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy bpytop nvtop rofi
 
 
 # setting up Starship prompt
@@ -12,7 +12,7 @@ curl -fsSL https://starship.rs/install.sh | bash
 
 
 echo "Finished installing base packages"
-
+vtop
 #### CONFIG FILE SETUP ####
 
 
@@ -63,6 +63,11 @@ echo "nodejs setup done"
 #### CLEAN-UP ####
 sudo apt autoremove -y
 rm -rf ~/config-files
+
+## Setting up .config folder
+echo "Setting up .config folder"
+cp -r ./.config/* ~/.config/ 
+echo "Finished setting up .config folder"
 
 echo "done with cleanup"
 ####
