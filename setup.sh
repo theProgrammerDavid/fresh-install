@@ -4,8 +4,9 @@ sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
 sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
-  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy bpytop nvtop rofi
+  python3-pip vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy nvtop rofi vim neovim
 
+pip3 install bpytop
 
 # setting up Starship prompt
 curl -fsSL https://starship.rs/install.sh | bash
@@ -15,6 +16,8 @@ echo "Finished installing base packages"
 vtop
 #### CONFIG FILE SETUP ####
 
+git config --global user.email "davidvelho2awesome@gmail.com"
+git config --global user.name "theProgrammerDavid"
 
 git clone https://github.com/theProgrammerDavid/config-files.git ~/config-files
 cd ~/config-files
