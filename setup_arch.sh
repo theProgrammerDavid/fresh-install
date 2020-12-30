@@ -18,3 +18,5 @@ sudo usermod -aG docker david
 echo ''
 
 docker run hello-world
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

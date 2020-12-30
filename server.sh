@@ -61,3 +61,5 @@ rm -rf ~/config-files
 
 echo "done with cleanup"
 ####
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
