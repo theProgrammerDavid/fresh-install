@@ -4,7 +4,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
 sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
-  python3-pip nmap  cmake rofi build-essential vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy nvtop rofi vim neovim
+  python3-pip vlc gparted nmap libgconf-2-4 cmake rofi build-essential vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy nvtop rofi vim neovim
 
 pip3 install bpytop
 
@@ -79,3 +79,7 @@ echo "done with cleanup"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Mongodb Compass
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.24.6_amd64.deb
+sudo dpkg -i ./mongodb-compass_1.24.6_amd64.deb
