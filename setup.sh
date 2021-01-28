@@ -88,3 +88,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Mongodb Compass
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.24.6_amd64.deb
 sudo dpkg -i ./mongodb-compass_1.24.6_amd64.deb
+
+
+## CARGO STUFF
+cargo install exa
+
+##
