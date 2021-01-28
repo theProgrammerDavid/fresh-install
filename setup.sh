@@ -3,7 +3,7 @@
 sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
-sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
+sudo apt install -y curl vim unzip git software-properties-common apt-transport-https bat wget \
   python3-pip vlc gparted nmap libgconf-2-4 cmake rofi build-essential vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy nvtop rofi vim neovim
 
 pip3 install bpytop
@@ -74,7 +74,12 @@ echo "Finished setting up .config folder"
 
 echo "done with cleanup"
 ####
+### BAT 
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
+
+###
 ## Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
