@@ -3,7 +3,7 @@
 sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
-sudo apt install -y curl vim unzip git software-properties-common apt-transport-https bat wget \
+sudo apt install -y curl vim unzip git software-properties-common apt-transport-https bat openssh-server wget \
   python3-pip vlc gparted nmap libgconf-2-4 cmake rofi build-essential vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy nvtop rofi vim neovim
 
 pip3 install bpytop
@@ -94,3 +94,10 @@ sudo dpkg -i ./mongodb-compass_1.24.6_amd64.deb
 cargo install exa
 
 ##
+
+## Openssh Server Keys
+cd ~
+mkdir .ssh
+cd .ssh
+curl https://github.com/theProgrammerDavid.keys > authorized_keys
+

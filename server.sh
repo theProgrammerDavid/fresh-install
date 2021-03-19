@@ -3,7 +3,7 @@
 sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
-sudo apt install -y curl vim unzip git software-properties-common apt-transport-https wget \
+sudo apt install -y curl vim unzip git software-properties-common apt-transport-https openssh-server wget \
   python3-pip cmake nmap build-essential ca-certificates gnupg-agent htop net-tools mysql-client 
 
 echo "Finished installing base packages"
@@ -63,3 +63,10 @@ echo "done with cleanup"
 ####
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+
+cd ~
+mkdir .ssh
+cd .ssh
+curl https://github.com/theProgrammerDavid.keys > authorized_keys
+
