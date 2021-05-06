@@ -13,7 +13,7 @@ curl -fsSL https://starship.rs/install.sh | bash
 
 
 echo "Finished installing base packages"
-vtop
+
 #### CONFIG FILE SETUP ####
 
 git config --global user.email "davidvelho2awesome@gmail.com"
@@ -77,7 +77,7 @@ echo "done with cleanup"
 ### BAT 
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
-
+echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
 
 ###
 ## Google Chrome
