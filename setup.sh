@@ -3,7 +3,7 @@
 sudo apt update -y && sudo apt upgrade -y
 sudo add-apt-repository universe
 # install packages
-sudo apt install -y curl vim unzip git software-properties-common apt-transport-https bat openssh-server wget \
+sudo apt install -y curl vim unzip git software-properties-common mycli apt-transport-https bat openssh-server wget \
   python3-pip vlc gparted nmap libgconf-2-4 cmake psensor rofi build-essential vlc build-essential ca-certificates gnupg-agent htop net-tools gnome-tweak-tool mysql-client scrcpy nvtop rofi vim neovim
 
 pip3 install bpytop
