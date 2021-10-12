@@ -6,7 +6,7 @@ git clone https://github.com/theProgrammerDavid/config-files ~/config-files
 cd ~/config-files
 bash ./setup.sh
 
-sudo pacman -S docker docker-compose openssh p7zip p7zip-plugins unrar tar rsync bat binutils teams code fakeroot make cmake gcc mesa-demos
+sudo pacman -S docker docker-compose openssh p7zip p7zip-plugins unrar tar rsync bat binutils teams code fakeroot make cmake gcc mesa-demos npm
 yay -S nodejs
 
 # setup the docker stuff
